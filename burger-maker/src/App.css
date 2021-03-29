@@ -1,0 +1,31 @@
+.Vegetables,.Fruits{
+    display: inline-block;
+    width: 300px;
+    height: 350px;
+    border: 1px solid black;
+    margin: 20px;
+    text-align: center;
+    box-shadow: 1px 2px 3px blue;
+  
+  }
+  
+  .inputs{
+    display: inline-block;
+  }
+  
+  .tableDiv{
+    text-align: center;
+  }
+   
+
+  #add-button{
+      margin: 10px;
+      background-color: green;
+      color: white;
+  }
+
+   .tableDiv tr td th{
+       border:1px solid black;
+       border-collapse:collapse;
+       
+   }
