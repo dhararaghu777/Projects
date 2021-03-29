@@ -1,0 +1,27 @@
+.heading{
+    margin: 20px 0;
+    text-align: center;
+    padding: 5px;
+    color: #49c5b6;
+    font-size: 23px;
+}
+
+.Languages{
+    margin: 30px 5px;
+   text-align: center;
+   padding: 5px;
+}
+
+.row{
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+@media (max-width:500px){
+    
+    .row{
+       text-align: center;
+    }
+}

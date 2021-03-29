@@ -1,0 +1,15 @@
+.Slides{
+    width: 100%;
+}
+
+.Image{
+    width: 90%;
+    height: 450px;
+    margin: 0px auto;
+}
+
+.h3{
+  -webkit-text-fill-color: rgb(15, 15, 15); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.4px;
+  -webkit-text-stroke-color: white;
+}

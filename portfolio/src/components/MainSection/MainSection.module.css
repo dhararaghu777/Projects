@@ -1,0 +1,13 @@
+.MainSection{
+   display: block;
+   
+}
+
+@media (max-width:500px){
+   /* .MainSection{
+      display: block;
+      text-align: center; 
+      width: 100%;
+   } */
+}
+

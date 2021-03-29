@@ -1,0 +1,47 @@
+.Section4{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.Section4 .heading{
+    padding: 10px 20px;
+}
+
+.Section4 .Details1{
+    width: 60%;
+    margin: 20px auto;
+}
+
+.Section4 .img1{
+    width: 150px;
+    height: 110px;
+    border-radius: 35%
+}
+
+.Section4 .img1:hover{
+    cursor:pointer;
+}
+
+.Section4 .Details2{
+    width: 50%;
+    margin: 20px auto;
+    padding: 10px 0;
+}
+
+.Section4 .img2{
+    width: 70px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.Section4 .img2:hover{
+    cursor:pointer;
+}
+
+@media (max-width:500px){
+    .Section4 .Details2{
+        width: 80%;
+        margin: 20px auto;
+        padding: 10px 0;
+    }
+}

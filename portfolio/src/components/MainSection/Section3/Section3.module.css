@@ -1,0 +1,25 @@
+.Section3{
+    width: 100%;
+    height: fit-content;
+    margin: 0px 0 5px 0;
+    background-color:#49c5b6;
+    padding: 15px 0;
+}
+
+.Section3 .content{
+    text-align: center;
+    font-size: larger;
+    font-weight: 800;
+    margin: 10px;
+    padding-bottom: 10px;
+}
+.Section3 h4{
+    font-weight: 800;
+    color: black;
+}
+.Section3 .button{
+    text-align: center;
+    margin: 20px 0;
+}
+
+

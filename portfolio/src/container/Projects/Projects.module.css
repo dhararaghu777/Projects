@@ -1,0 +1,30 @@
+.Projects{
+    text-align: center;
+    margin: 10px;
+    font-size: larger;
+    font-weight: 600;
+}
+
+.Projects .content{
+    color:  #49c5b6;
+}
+.Projects .row{
+    padding: 10px 2px;
+ }
+
+
+.Projects img{
+    width: 300px;
+    height: 250px;
+}
+
+.Projects a{
+    color: black;
+    text-decoration: none;
+}
+.Projects a:hover{
+    /* background-color:#49c5b6;    */
+    cursor: pointer;
+    text-decoration: none;
+    color: #49c5b6;
+}

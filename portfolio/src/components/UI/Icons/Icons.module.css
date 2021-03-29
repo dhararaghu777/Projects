@@ -1,0 +1,18 @@
+.Icons{
+    width: 200px;
+    height: 200px;
+    text-align: center; 
+    margin: 10px 40px;
+}
+
+.Icons .image{
+    width: 100%;
+    height: 90%;
+    border-radius: 20%;
+}
+
+@media (max-width:500px){
+    .Icons{ 
+        margin: 15px auto;
+    }
+}

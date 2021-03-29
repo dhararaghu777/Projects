@@ -1,0 +1,37 @@
+.Section2{
+  width: 100%;
+  /* height: fit-content; */
+  text-align: center;
+  margin: 10px 10px;
+  padding: 20px 0px 0px 0;
+}
+
+.Section2 .List{
+    margin: 15px 2px;
+}
+ 
+.Section2 .button{
+    margin: 40px auto;
+}
+
+
+
+.Section2 button:hover{
+    background-color: #49c5b6;
+}
+
+@media (max-width:500px){
+    .Section2{
+        width: 100%;
+        text-align: center;
+      }
+
+      .Section2 .List{
+        margin: auto auto;
+    }
+
+
+    .Section2 .button{
+        margin: 30px auto;
+    }
+}

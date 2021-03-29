@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+
+.Navbar{
+    background-color: #f4f7f6 ;  
+}
+
+.Navbar .ul{
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    background-color: #f4f7f6 ;
+    padding-top:0 ;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 15px;
+}
+
+.Navbar .ul1{
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    width: 100%;
+    background-color: #f4f7f6 ;
+    padding-top:0 ;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 15px;
+}
+
+.Navbar .li{
+   display: inline-flex;
+   margin: 0px 15px;
+   float: right;
+} 
+
+.Navbar .li1{
+   display: inline-flex;
+   margin: 0px 20px;
+   width: fit-content;
+   font-family: 'Pacifico', cursive !important;
+   font-size: 25px;
+   font-weight: 550;
+}
+
+.Navbar .logo{
+    width: 100px;
+    height: 30px;
+}
+
+.Navbar .NavLinks{
+    color: black;
+    font-size: large;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.Navbar .NavLinks:hover{
+    cursor: pointer;
+    color: #49c5b6;
+}
+
+.Navbar .ul1 .dashbar{
+    border: 1px solid none;
+    box-sizing: border-box;
+}
+
+.Navbar .ul1 .dashbar .div1{
+    width: 30px;
+    height: 5px;
+    background-color: black;
+    margin: 2px 5px;
+}
+
+
+.Navbar .TogglePage{
+    position: absolute;
+    width: 50%;
+    height: 500px;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    background-color: #f4f7f6;
+   
+}
+
+.Navbar .TogglePage .div{
+    margin: 30% 8%;
+    padding: 3px 5px;
+}
+
+.Navbar .TogglePage .div .childDiv{
+    margin: 10px 0;
+    padding: 2px;
+}
+
+ @media (max-width:500px){
+    .Navbar .ul{
+        display: none;
+    }
+    .Navbar .ul1{
+        display: block;
+        position: relative;
+    }
+
+    .Navbar .li{
+        display: inline-flex;
+        margin: 0px 15px;
+        float: right;
+     } 
+     
+     .Navbar .li1{
+        display: inline-flex;
+        margin: 0px 15px;
+        width: fit-content;
+        font-family: 'Pacifico', cursive !important;
+        font-size: 22px;
+        font-weight: 550;
+     }
+
+     .Navbar .ul1 .dashbar{
+        display: flex;
+        flex-flow: column;
+        flex-wrap: wrap;
+        border: 1px solid none;
+        box-sizing: border-box;
+        z-index: 99;
+    }
+
+    .Navbar .NavLinks:hover{
+        cursor: pointer;
+        color: #49c5b6;
+    }
+} 
