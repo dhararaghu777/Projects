@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1.0">
+    <title>Example 1</title>
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/responsive.css">
+	<script type="text/javascript" src="posts.json"></script>
+	<script type="text/javascript" src="myTeam.json"></script>
+  </head>
+  <body>
+      <header>
+        <div class="logo">
+            <img src="images/game-logo.svg" alt="logo">
+        </div>
+        <nav class="center-menu">
+            <ul>
+                <li class="active" ><span>Cricket</span></li>
+                <li><span>Football</span></li>
+                <li><span>NBA</span></li>
+                <li><span>Hockey</span></li>
+            </ul>
+        </nav>
+      </header>
+        <section class="current-match" id="create-team-section">
+            
+            <div class="container">
+                <h2>Current Match</h2>
+                <div class="card-group">
+                    <div class="card-list">
+                        <div class="card-content">
+                            <div class="left-team">
+                                <div class="team-image"><img src="images/csk.png"></div>
+                                <div class="team-name"><span>CSK</span></div>
+                            </div>
+                            <div class="sperator left-time"><span>vs</span></div>
+                            <div class="right-team">
+                                <div class="team-name"><span>RCB</span></div>
+                                <div class="team-image"><img src="images/rcb.png"></div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+                </div>
+            </section>
+			<section class="create-match" style="height: 100vh">
+				<!-- Fill your code-->
+				<div class="container">
+                    <div class="team-players">
+                        <nav class="center-menu">
+                            <ul>
+                                <li class="active" id="wk-nav" onclick="tabclick('wk')">WK</li>
+                                <li id="bat-nav" onclick="tabclick('bat')">BATSMEN</li>
+                                <li id="all-rounder-nav" onclick="tabclick('all-rounder')">ALL-ROUNDER</li>
+                                <li id="bowler-nav" onclick="tabclick('bowler')">BOWLER</li>
+                            </ul>
+                        </nav>
+                        <div id="error-msg"></div>
+                        <!-- Wicket-Keeper -->
+                        <div id="wk" class="type" style="display: block;">
+                            <div class="help-content">
+                                <span>Pick one wicket keeper</span>
+                            </div>
+                            <table class="create-team-table">
+                                <thead>
+                                    <th></th>
+                                    <th>PLAYERS</th>
+                                    <th>POINTS</th>
+                                    <th>CREDITS</th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="wk-table">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Batsman -->
+                        <div id="bat" style="display: none;" class="type">
+                            <div class="help-content">
+                                <span>Pick Four Batsman</span>
+                            </div>
+                            <table class="create-team-table">
+                                <thead>
+                                    <th></th>
+                                    <th>PLAYERS</th>
+                                    <th>POINTS</th>
+                                    <th>CREDITS</th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="bat-table">
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- all-rounder -->
+                        <div id="all-rounder" style="display: none;" class="type">
+                            <div class="help-content">
+                                <span>Pick Two All-Rounders</span>
+                            </div>
+                            <table class="create-team-table">
+                                <thead>
+                                    <th></th>
+                                    <th>PLAYERS</th>
+                                    <th>POINTS</th>
+                                    <th>CREDITS</th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="ar-table">
+                                   
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- bowler -->
+                        <div id="bowler" style="display: none;" class="type">
+                            <div class="help-content">
+                                <span>Pick Four Bowlers</span>
+                            </div>
+                            <table class="create-team-table">
+                                <thead>
+                                    <th></th>
+                                    <th>PLAYERS</th>
+                                    <th>POINTS</th>
+                                    <th>CREDITS</th>
+                                    <th></th>
+                                </thead>
+                                <tbody id="bowl-table">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+            <!------------------------ Green-Ground ---------------------->
+                    <div class="player-preview">
+                        <div class="preview">
+                            <div id="wk-img">
+                                <h3>Wicket-Keeper</h3>
+                                <!-- <div class="pre-img preview-img-2">
+                                    <div class="preview-block">
+                                        <div class="">
+                                            <img src="" alt="">
+                                        </div>
+                                            <div class=""></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="clr"></div>
+                            <div id="bat-img">
+                                <h3>Batsman</h3>
+                                <!-- <div class="pre-img preview-img-1">
+                                    <div class="preview-block">
+                                        <div class="">
+                                            <img src="" alt="">
+                                        </div>
+                                            <div class=""></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="clr"></div>
+                            <div id="all-rounder-img">
+                                <h3>All-Rounder</h3>
+                                <!-- <div class="pre-img preview-img-6">
+                                    <div class="preview-block">
+                                        <div class="">
+                                            <img src="" alt="">
+                                        </div>
+                                            <div class=""></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="clr"></div>
+                            <div id="bowler-img">
+                                <h3>Bowler</h3>
+                                <!-- <div class="pre-img preview-img-11">
+                                    <div class="preview-block">
+                                        <div class="">
+                                            <img src="" alt="">
+                                        </div>
+                                            <div class=""></div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <div class="clr"></div>
+                        </div>
+                    </div>
+                </div>
+				
+			</section>
+			
+			<section class="current-match">
+				<div class="container">
+					<div class="create-team">
+						<input type="submit" value="Create Team" id="create-team-btn"/>
+					</div>
+				</div>
+            </section>
+            
+
+            <!-- ---------------------------javascript -------------------------------->
+
+			<script>
+
+                var selTeam = JSON.parse(selTeam);
+                var myTeam = JSON.parse(myTeam);	
+
+                var typeList=document.getElementsByClassName("type");
+
+                function tabclick(type)
+                {
+                    document.getElementById("wk-nav").className="";
+                    document.getElementById("bat-nav").className="";
+                    document.getElementById("all-rounder-nav").className="";
+                    document.getElementById("bowler-nav").className="";
+
+                    for(var i=0;i<typeList.length;i++)
+                    {
+                        typeList[i].style.display="none";
+                    }
+                    document.getElementById(type).style.display="block";
+                    document.getElementById(type+"-nav").className="active";
+                    document.getElementById("error-msg").innerHTML="";
+                }
+
+                var wicketKeeper="",batman="",allRounder="",bowler="";
+                buildTeam();
+
+                function buildTeam()
+                {
+                    //var indexVal=0;
+                    var functionCall;
+                    
+                    for(var i=0;i<selTeam.length;i++)
+                    {
+                        functionCall=`previewTeamImage('${selTeam[i].id-1}')`;
+                        //console.log(selTeam[i].id-1);
+                        if(selTeam[i].type=='wk')
+                        {
+                            wicketKeeper+=`<tr id="wkselected-${selTeam[i].id-1}">
+                                            <td>
+                                            <div class="postedByHighlight">
+                                                <div class="preview-holder">
+                                                    <div class="preview-img">
+                                                        <img src="images/${selTeam[i].image}.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h3>${selTeam[i].playerName}</h3>
+                                            <span>${selTeam[i].teamName}-${selTeam[i].type}</span>
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].points}
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].credits}
+                                        </td>
+                                        <td>
+                                            <div class="add-player" id="name-${selTeam[i].playerName}" onclick="${functionCall}">
+                                                <img src="images/add-player.svg" alt="">
+                                            </div>
+                                        </td>
+                                    </tr>`
+                        }
+                        if(selTeam[i].type=='bat')
+                        {
+                            batman+=`<tr id="batselected-${Number(selTeam[i].id)-1}">
+                                        <td>
+                                            <div class="postedByHighlight">
+                                                <div class="preview-holder">
+                                                    <div class="preview-img">
+                                                        <img src="images/${selTeam[i].image}.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h3>${selTeam[i].playerName}</h3>
+                                            <span>${selTeam[i].teamName}-${selTeam[i].type}</span>
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].points}
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].credits}
+                                        </td>
+                                        <td>
+                                            <div class="add-player" id="name-${selTeam[i].playerName}" onclick="${functionCall}">
+                                                <img src="images/add-player.svg" alt="">
+                                            </div>
+                                        </td>
+                                    </tr>`
+                        }
+                        if(selTeam[i].type=='all-rounder')
+                        {
+                            allRounder+=`<tr id="all-rounderselected-${Number(selTeam[i].id)-1}">
+                                        <td>
+                                            <div class="postedByHighlight">
+                                                <div class="preview-holder">
+                                                    <div class="preview-img">
+                                                        <img src="images/${selTeam[i].image}.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h3>${selTeam[i].playerName}</h3>
+                                            <span>${selTeam[i].teamName}-${selTeam[i].type}</span>
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].points}
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].credits}
+                                        </td>
+                                        <td>
+                                            <div class="add-player" id="name-${selTeam[i].playerName}" onclick="${functionCall}">
+                                                <img src="images/add-player.svg" alt="">
+                                            </div>
+                                        </td>
+                                    </tr>`
+                        }
+                        if(selTeam[i].type=='bowler')
+                        {
+                            bowler+=`<tr id="bowlerselected-${Number(selTeam[i].id)-1}">
+                                        <td>
+                                            <div class="postedByHighlight">
+                                                <div class="preview-holder">
+                                                    <div class="preview-img">
+                                                        <img src="images/${selTeam[i].image}.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <h3>${selTeam[i].playerName}</h3>
+                                            <span>${selTeam[i].teamName}-${selTeam[i].type}</span>
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].points}
+                                        </td>
+                                        <td>
+                                            ${selTeam[i].credits}
+                                        </td>
+                                        <td>
+                                            <div class="add-player" id="name-${selTeam[i].playerName}" onclick="${functionCall}">
+                                                <img src="images/add-player.svg" alt="">
+                                            </div>
+                                        </td>
+                                    </tr>`
+                        }
+                        // indexVal++;
+                    }
+                    
+                    document.getElementById("wk-table").innerHTML=wicketKeeper;
+                    document.getElementById("bat-table").innerHTML=batman;
+                    document.getElementById("ar-table").innerHTML=allRounder;
+                    document.getElementById("bowl-table").innerHTML=bowler;
+					
+                }
+                
+                var wkCount=0,batCount=0;allRounderCount=0,bowlerCount=0;
+                var totalCount=0;
+                
+                function previewTeamImage(index)
+                {
+                    var obj=selTeam[index];
+                    console.log(obj);
+                    var idForSel=++index;
+
+                   var myPlayer = document.getElementById("name-"+obj.playerName).className;
+
+                   var add='<img src="images/add-player.svg" alt="">';
+                   var remove='<img src="images/remove-player.svg" alt="">';
+                   
+                   if(myPlayer=='add-player')
+                   {
+                       
+                       if(obj.type=='wk' && totalCount<11)
+                       {
+                           if(wkCount<1)
+                           {
+                            myTeam[0].players.wk.push(obj);
+                            wkCount++;
+                            
+                            document.getElementById("name-"+obj.playerName).innerHTML=remove;
+                            document.getElementById("name-"+obj.playerName).className='remove-player';
+                            //document.getElementsByTagName('tr')[1].className="player-sel-bg";
+
+                           }
+                           else{
+                            showErrorMessage("wk",wkCount);
+                           }
+                       }
+                       else if(obj.type=='bat' && totalCount<11)
+                       {    
+                           if(batCount<5)
+                           {
+                                batCount++;
+                                myTeam[0].players.bat.push(obj);
+                                document.getElementById("name-"+obj.playerName).innerHTML=remove;
+                                document.getElementById("name-"+obj.playerName).className='remove-player';
+                                
+                           }
+                           else{
+                                showErrorMessage("bat",batCount);
+                                console.log("error at bat");
+                           }
+                             
+                       }
+                       else if(obj.type=='all-rounder' && totalCount<11)
+                       {    
+                           if(allRounderCount<3)
+                           {
+                            allRounderCount++;
+                            myTeam[0].players.ar.push(obj);
+                            document.getElementById("name-"+obj.playerName).innerHTML=remove;
+                            document.getElementById("name-"+obj.playerName).className='remove-player';
+                            
+                           }
+                           else{
+                                showErrorMessage("all-rounder",allRounderCount);
+                           }
+                              
+                       }
+                       else if(obj.type=='bowler' && totalCount<11)
+                       {    
+                            if(bowlerCount<5)
+                            {
+                                bowlerCount++;
+                                myTeam[0].players.bowl.push(obj);
+                                document.getElementById("name-"+obj.playerName).innerHTML=remove;
+                                document.getElementById("name-"+obj.playerName).className='remove-player';
+                                
+                            }
+                           
+                           else{
+                            showErrorMessage("bowler",bowlerCount);
+                           }
+                       }
+                       else{
+                        showErrorMessage("total",totalCount); 
+                       }
+
+                       totalCount=wkCount+batCount+allRounderCount+bowlerCount;
+
+                       if(totalCount>=11)
+                       {
+                           if(wkCount!=1)
+                           {
+                              showErrorMessage("wk",totalCount)
+                           }
+                           else if(batCount<3){
+                               showErrorMessage("bat",totalCount);
+                           }
+                           else if(allRounderCount<1)
+                           {
+                               showErrorMessage("all-rounder",totalCount);
+                           }
+                           else if(bowlerCount<3)
+                           {
+                               showErrorMessage("bowler",totalCount);
+                           }
+                           else if(totalCount>=1){
+                            showErrorMessage("total",totalCount);
+                           }
+                        
+                       }
+                       
+                       DisplayOnGround();
+                       
+                   }
+
+                   if(myPlayer=='remove-player')
+                   {
+                        var i=Number(obj.id);
+                       if(obj.type=='wk')
+                       {
+                         removePlayers(i,obj.type);
+                         wkCount--;
+                         showErrorMessage("wk",wkCount);
+                         
+                         
+                       }
+                       if(obj.type=='bat')
+                       {
+                        removePlayers(i,obj.type);
+                        batCount--;
+                        showErrorMessage("bat",batCount);
+                        
+                       }
+                       if(obj.type=='all-rounder')
+                       {
+                        removePlayers(i,obj.type);
+                        allRounderCount--;
+                        showErrorMessage("all-rounder",allRounderCount);
+                        
+                       }
+                       if(obj.type=='bowler')
+                       {
+                        removePlayers(i,obj.type);
+                        bowlerCount--;
+                        showErrorMessage("bolwer",bowlerCount);
+                        
+                       }
+
+                       totalCount=wkCount+batCount+allRounderCount+bowlerCount;
+                       if(totalCount>=11){
+                        showErrorMessage("total",totalCount);
+                       }
+                       
+                       document.getElementById("name-"+obj.playerName).innerHTML=add;
+                       document.getElementById("name-"+obj.playerName).className='add-player';
+                       
+                       DisplayOnGround();
+                       
+                   }
+	
+                }
+                
+                function removePlayers(x,playerType)
+                {
+                    if(playerType=='all-rounder'){
+                        playerType='ar';
+                    }
+                    if(playerType=='bowler'){
+                        playerType='bowl'
+                    }
+                    var arr=myTeam[0].players[playerType];
+                    console.log(arr);
+                    for(var j=0;j<arr.length;j++)
+                    {
+                        if(arr[j].id==x)
+                        {
+                            console.log(arr[j]);
+                            arr.splice(j,1);
+                            break;
+                        }
+                    }
+                }
+
+                function showErrorMessage(errorPlace,count)
+                {
+                    if(errorPlace=='wk')
+                    {
+                        if(count>=1)
+                        {
+                             document.getElementById("error-msg").innerHTML="You have to select only one wk";
+                             console.log("error");
+                        }
+                        else{
+                            document.getElementById("error-msg").innerHTML="";
+                            console.log("no error");
+                        }
+                    }
+
+                    else if(errorPlace=='bat')
+                    {
+                        if(count<3 || count>=5)
+                        {
+                            document.getElementById("error-msg").innerHTML="You can select only 3 to 5 batsmen only";
+                        }
+    
+                        else{
+                            document.getElementById("error-msg").innerHTML="";
+                        }
+                    }
+
+                    else if(errorPlace=='all-rounder')
+                    {
+                        if(count<1 || count>=3)
+                        {
+                            document.getElementById("error-msg").innerHTML="You can select only 1 to 3 all rounder";
+                        }
+                        else{
+                            document.getElementById("error-msg").innerHTML="";
+                        }
+                    }
+                    else if(errorPlace=='bowler')
+                    {
+                        if(count<3 || count>=5)
+                        {
+                            document.getElementById("error-msg").innerHTML="You can select only 3 to 5 bowlers";
+                        }
+                        else{
+                            document.getElementById("error-msg").innerHTML="";
+                        }
+                    }
+
+                    else if(errorPlace=='total')
+                    {
+                        if(count>=11)
+                        {
+                            document.getElementById("error-msg").innerHTML="You have selected your team!!";
+                        }
+                        else{
+                            document.getElementById("error-msg").innerHTML="";
+                            console.log("no error");
+                        }
+                    }
+
+                }
+
+
+                function DisplayOnGround()
+                {
+                    
+                        var wicketKeeperImg="<h3>Wicket-Keeper</h3>",battingImg="<h3>BATSMAN</h3>",
+                        allRounderImg="<h3>ALL-ROUNDER</h3>",
+                        bowlingImg="<h3>BOWLER</h3>";
+                        
+                        for(var k=0;k<myTeam[0].players.wk.length;k++)
+                        {
+                            wicketKeeperImg+=` <div class="pre-img preview-img-${myTeam[0].players.wk[k].id}">
+                                                <div class="preview-block">
+                                                    <div class="preview-img">
+                                                        <img src="images/${myTeam[0].players.wk[k].image}.png" alt="">
+                                                    </div>
+                                                    <div class=" preview-name-label">${myTeam[0].players.wk[k].playerName}</div>
+                                                </div>
+                                            </div>`
+                                                
+                                            
+                        }
+                        for(var k=0;k<myTeam[0].players.bat.length;k++)
+                        {
+                            battingImg+=`<div class="pre-img preview-img-${myTeam[0].players.bat[k].id}">
+                                                <div class="preview-block">
+                                                    <div class="preview-img">
+                                                        <img src="images/${myTeam[0].players.bat[k].image}.png" alt="">
+                                                    </div>
+                                                    <div class=" preview-name-label">${myTeam[0].players.bat[k].playerName}</div>
+                                                </div>
+                                            </div>`
+                                                
+                                            
+                        }
+                        for(var k=0;k<myTeam[0].players.ar.length;k++)
+                        {
+                            allRounderImg+=`<div class=" pre-img preview-img-${myTeam[0].players.ar[k].id}">
+                                                <div class="preview-block">
+                                                    <div class="preview-img">
+                                                        <img src="images/${myTeam[0].players.ar[k].image}.png" alt="">
+                                                    </div>
+                                                    <div class=" preview-name-label">${myTeam[0].players.ar[k].playerName}</div>
+                                                </div>
+                                            </div>`
+                                                
+                                            
+                        }
+                        for(var k=0;k<myTeam[0].players.bowl.length;k++)
+                        {
+                            bowlingImg+=`<div class="pre-img preview-img-${myTeam[0].players.bowl[k].id}">
+                                                <div class="preview-block">
+                                                    <div class="preview-img">
+                                                        <img src="images/${myTeam[0].players.bowl[k].image}.png" alt="">
+                                                    </div>
+                                                    <div class=" preview-name-label">${myTeam[0].players.bowl[k].playerName}</div>
+                                                </div>
+                                            </div>`
+                                                
+                                            
+                        }
+                        document.getElementById("wk-img").innerHTML=wicketKeeperImg;
+                        document.getElementById("bat-img").innerHTML=battingImg;
+                        document.getElementById("all-rounder-img").innerHTML=allRounderImg;
+                        document.getElementById("bowler-img").innerHTML=bowlingImg;
+                        
+                    
+                }
+
+
+			</script>
+
+  </body>
+</html>
+
+                                
+                              

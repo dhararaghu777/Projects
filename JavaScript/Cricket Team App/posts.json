@@ -1,0 +1,203 @@
+selTeam = `[	
+				{
+					"id":"1",
+					"playerName" : "Virat",
+					"type": "bat",
+					"teamName": "RCB",
+					"points": "109",
+					"credits": "10",
+					"image":"image-1"
+				},
+				{
+					"id":"2",
+					"playerName" : "Dhoni",
+					"type": "wk",
+					"teamName": "CSK",
+					"points": "239",
+					"credits": "10",
+					"image":"image-2"
+				},
+				{
+					"id":"3",
+					"playerName" : "Raina",
+					"type": "bat",
+					"teamName": "CSK",
+					"points": "139",
+					"credits": "9",
+					"image":"image-3"
+				},
+				{
+					"id":"4",
+					"playerName" : "Harbajan",
+					"type": "bowler",
+					"teamName": "CSK",
+					"points": "128",
+					"credits": "9",
+					"image":"image-4"
+				},
+				{
+					"id":"5",
+					"playerName" : "Stoinis",
+					"type": "all-rounder",
+					"teamName": "RCB",
+					"points": "128",
+					"credits": "10",
+					"image":"image-5"
+				},
+				{
+					"id":"6",
+					"playerName" : "Jadeja",
+					"type": "all-rounder",
+					"teamName": "RCB",
+					"points": "189",
+					"credits": "10",
+					"image":"image-6"
+				},
+				{
+					"id":"7",
+					"playerName" : "Moheen Ali",
+					"type": "all-rounder",
+					"teamName": "RCB",
+					"points": "189",
+					"credits": "10",
+					"image":"image-7"
+				},
+				{
+					"id":"8",
+					"playerName" : "Southee",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "18",
+					"credits": "10",
+					"image":"image-8"
+				},
+				{
+					"id":"9",
+					"playerName" : "Negi",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "18",
+					"credits": "10",
+					"image":"image-9"
+				},
+				{
+					"id":"10",
+					"playerName" : "Parthiv",
+					"type": "wk",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-10"
+				},
+				{
+					"id":"11",
+					"playerName" : "Thakur",
+					"type": "bowler",
+					"teamName": "CSK",
+					"points": "30",
+					 "credits": "10",
+					"image":"image-11"
+				},
+				
+				{
+					"id":"12",
+					"playerName" : "A b devilliers",
+					"type": "bat",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-12"
+				},
+				{
+					"id":"13",
+					"playerName" : "Thahir",
+					"type": "bowler",
+					"teamName": "CSK",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-13"
+				},
+				{
+					"id":"14",
+					"playerName" : "Watson",
+					"type": "bat",
+					"teamName": "CSK",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-14"
+				},
+				{
+					"id":"15",
+					"playerName" : "Faf du plesis",
+					"type": "bat",
+					"teamName": "CSK",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-15"
+				},
+				{
+					"id":"16",
+					"playerName" : "Rayudu",
+					"type": "bat",
+					"teamName": "CSK",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-16"
+				},
+				{
+					"id":"17",
+					"playerName" : "Bravo",
+					"type": "all-rounder",
+					"teamName": "CSK",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-17"
+				},
+				{
+					"id":"18",
+					"playerName" : "Hetmeyar",
+					"type": "bat",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-18"
+				},
+				{
+					"id":"19",
+					"playerName" : "D Chahar",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-19"
+				},
+				{
+					"id":"20",
+					"playerName" : "U Yadav",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-20"
+				},
+				{
+					"id":"21",
+					"playerName" : "Y Chahal",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-21"
+				},
+				{
+					"id":"22",
+					"playerName" : "Saini",
+					"type": "bowler",
+					"teamName": "RCB",
+					"points": "300",
+					 "credits": "10",
+					"image":"image-22"
+				}
+				
+]`;
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet"  href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+   <style >
+    .navbar-default
+    {
+    background: black;
+    }
+    .navbar-right
+    {
+        margin-right: 1000px;
+    }
+     body
+    {
+        background-image: url(./images/home.jpg);
+        background-size: cover;
+    }  
+</style>
+</head>
+<body>
+  <!-- <script src="./js/jquery.js"></script>
+        <script src="./bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+   
+    <script src="js/bootstrap.min.js"></script>
+        
+
+      <nav class="navbar navbar-default navbar-danger" role="navigation">
+          <div class="container-fluid">
+                <div class="navbar-header">
+              
+            
+            <ul class="nav navbar-nav">
+					<li><a href="./Homepage.html" style=""color:white">Home</a></li>
+					<li><a href="./view" style="color: white">View Schemes</a></li>
+					<li><a href="./AboutUs.html" style="color: white">AboutUs</a></li>
+					<li><a href="./Contact.html" style="color: white">Contact</a></li>
+					<li><form class="form-inline my-2 my-lg-0" method="get" action="./check">
+							<input class="form-control mr-sm-2" type="search"
+								placeholder="Phone Number" aria-label="Search" name="phn">
+							<button class="btn btn-outline-success my-2 my-sm-0"
+								type="submit">Check Status</button>
+						</form></li>
+				</ul>
+        </div> 
+         </div>
+      </nav>
+
+      <div class="card" >
+		<div class="card-body">
+			<div class="align-center">
+				<div class="container">
+					<div class="col-md-4 col-md-offset-8 mt-4">
+							<h1 class="text-center">Login</h1>
+							
+						<form action="./logincont" method="post">
+							
+							<div class="form-group">
+								<label for="exampleInputEmail1">Role</label> <select
+									class="custom-select" id="inputGroupSelect01" name="role">
+									<option selected>---Choose---</option>
+									<option >Admin</option>
+									<option >Lao</option>
+								</select>
+							</div>
+							
+							
+							
+							<div class="form-group">
+								<label for="exampleInputEmail1">Login Id</label> <input
+									type="text" class="form-control" id="exampleInputEmail1"
+									aria-describedby="emailHelp" placeholder="login id"
+									name="user">
+							</div>
+							<div class="form-group">
+								<label for="exampleInputPassword1">Password</label> <input
+									type="password" class="form-control" id="exampleInputPassword1"
+									placeholder="Password" name="pass">
+							</div>
+							
+							
+							<button type="submit" class="btn btn-primary pull-right btn-lg" >Submit</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    </div>
+</div>  
+    
+    
+</body>
+</html>

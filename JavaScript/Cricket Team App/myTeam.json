@@ -1,0 +1,13 @@
+
+myTeam =
+ `[	{
+			"players" : {
+				"bat" : [],
+				"bowl" : [],
+				"ar" : [],
+				"wk" : []
+			},
+			"captain" : "asdf",
+			"vc" : "asdf"
+	}
+	]`;

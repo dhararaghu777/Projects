@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="icon" type="image/x-icon" href="images/favicon.png">
+        <meta charset="utf-8">
+        <title>1-Posts</title>
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Roboto:100,400,500,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/app.css">
+        <link rel="stylesheet" href="css/common.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        
+        <!-- <script type="text/javascript" src="posts.json"></script> -->
+    <head>
+
+    <body id="body-header">
+        <header>
+            <nav id="navbar">
+                <div class="container">
+                    <div class="logo-area">
+                        <img src="images/logo.png" />
+                    </div>
+                    <ul class="right-nav-icons">
+                        <li>
+                            <img src="images/menuicons/icon-1.png" />
+                        </li>
+                        <li>
+                            <img src="images/menuicons/icon-2.png" />
+                        </li>
+                        <li>
+                            <img src="images/menuicons/icon-3.png" />
+                        </li>
+                    </ul>
+                    <div class="clr"></div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="container">
+            <div class="story">
+                <div class="story-block">
+                    <div class="story-outer-holder" id="story-preview" onclick="storyPreview()">
+                        <div class="story-preview-img">
+                            <img src="images/image-1.jpg" alt=""/>
+                        </div>
+                        <div class="story-text">
+                            <span>#OneplusShot</span>
+                        </div>
+                    </div>
+                    <!-- ------------------Status--------------------- -->
+                    <div class="modal " id="myModal">
+                        
+                    </div>
+                </div>
+            </div>
+            
+            <div class="posts-wrapper" id="post-data">
+                <div class="post-item">
+                    <div class="posted-by">
+                        <b>PriyaBavani</b> 
+                    </div>
+                    <img src="" alt="">
+                    <div class="action-block">
+                        <div class="heart-icon">
+                            <img src="" alt="" onclick="toggleLike()">
+                        </div>
+                        <div class="comment-icon">
+                            <img src="images/comment.png" alt="">
+                        </div>
+                    </div>
+                    <div class="liked-by">
+                        10 likes  
+                    </div>
+                    <div class="caption">
+                        Awesome Day
+                    </div>
+                </div>
+                <div class="post-item">
+                    <div class="posted-by">
+                        <b>PriyaBavani</b> 
+                    </div>
+                    <img src="" alt="">
+                    <div class="action-block">
+                        <div class="heart-icon">
+                            <img src="" alt="" onclick="toggleLike()">
+                        </div>
+                        <div class="comment-icon">
+                            <img src="images/comment.png" alt="">
+                        </div>
+                    </div>
+                    <div class="liked-by">
+                        <!-- 10 likes -->
+                    </div>
+                    <div class="caption">
+                        HappyTimes
+                    </div>
+                </div>
+                <div class="post-item">
+                    <div class="posted-by">
+                        <b>PriyaBavani</b> 
+                    </div>
+                    <img src="" alt="">
+                    <div class="action-block">
+                        <div class="heart-icon">
+                            <img src="" alt="" onclick="toggleLike()">
+                        </div>
+                        <div class="comment-icon">
+                            <img src="images/comment.png" alt="">
+                        </div>
+                    </div>
+                    <div class="liked-by">
+                        87 likes
+                    </div>
+                    <div class="caption">
+                        
+                    </div>
+                </div>
+            </div>
+
+            
+
+        </main>
+<!-- --------------------javascript------------------------ -->
+        <script>
+            var myPost = [ { "image": "images/image-4.jpg", "likedCount": "10", "caption": "Awesome Day", "youLiked": true, "postedBy":"PriyaBavani", "comment":["cute pic", "Nice!!!","OMG!!!!!!!!!!!!!!!!!!!!"] }, { "image": "images/image-5.jpg", "likedCount": "100", "caption": "HappyTimes", "youLiked": true, "postedBy":"PriyaBavani", "comment":["Where is this place??"] }, { "image": "images/image-6.jpg", "likedCount": "87", "caption": ":-)", "youLiked": false, "postedBy":"PriyaBavani", "comment": ["nice click"] } ]
+            
+            //var postData="";
+            var index=-1;
+            document.getElementById("post-data").innerHTML="";
+            for(var i=0;i<myPost.length;i++)
+            {
+                index++;
+                buildPost(myPost[i]);
+            }
+           // document.getElementById('post-data').innerHTML=postData;
+
+              function buildPost(myObj) 
+              {
+               
+                    var likedByMe="";
+                    var liked=false;
+                    var image=""
+                    
+                    if(myObj.youLiked==true)
+                    {
+                        
+                        likedByMe+=myObj.likedCount+" likes";
+                        image+="images/heart-filled.png"
+                    }
+                    else
+                    {
+                        likedByMe+=myObj.likedCount+" likes";
+                        image+="images/heart.png"
+                    }
+
+                    var postData=`<div class="post-item">
+                                <div class="posted-by">
+                                    <b>${myObj.postedBy}</b> 
+                                </div>
+                                <img src="${myObj.image}" alt="">
+                                <div class="action-block">
+                                    <div class="heart-icon">
+                                        <img src="${image}" alt="" onclick="toggleLike(${index})">
+                                    </div>
+                                    <div class="comment-icon">
+                                        <img src="images/comment.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="liked-by">
+                                    ${likedByMe}
+                                </div>
+                                <div class="caption">
+                                    ${myObj.postedBy} ${myObj.caption}
+                                </div>
+                            </div>`;
+                            
+                            document.getElementById("post-data").innerHTML+=postData;
+
+                }
+               
+             
+
+            function toggleLike(i)
+            {
+                var changeHeart="";
+                var changeCount="";
+                
+                if(myPost[i].youLiked==true)
+                {
+                    myPost[i].youLiked=false;
+                    changeHeart+="images/heart.png";
+                    changeCount+=myPost[i].likedCount+" likes";
+                    
+                    
+                }
+                else{
+                    myPost[i].youLiked=true;
+                    changeHeart+="images/heart-filled.png";
+                    changeCount+="Liked by You and "+myPost[i].likedCount+" others";
+                }
+                document.getElementsByClassName("heart-icon")[i].innerHTML=`<img src="${changeHeart}" alt="" onclick="toggleLike(${i})">`;
+                document.getElementsByClassName("liked-by")[i].innerHTML=changeCount;
+                
+            }
+
+            
+            var flag=true;
+
+            function storyPreview() 
+            {
+                var showStoryPreview=`<div class="modal-content">
+                                        <div class="postedByHighlight">
+                                            <div class="preview-holder">
+                                                <div class="preview-img">
+                                                    <img src="images/image-1.jpg" alt="photo"/>
+                                                </div>
+                                            </div>
+                                            <span>#OneplusShot</span>
+                                        </div>
+                                        <div id="myProgress">
+                                            <div id="myBar">
+                    
+                                            </div>
+                                        </div>
+                                        <span class="close" onclick="closeStatus()">
+                                            <img  src="https://www.freeiconspng.com/uploads/silver-close-button-png-15.png" width="350" alt="silver close button png" />
+                                        </span>
+                                        <div class="story-highlight" style="display: inline-block;">
+                                            <img src="images/image-1.jpg" alt="photo"/>
+                                        </div>
+                                    </div>`;
+                document.getElementById("myModal").innerHTML=showStoryPreview;
+               document.getElementById("myModal").style.display="block";
+              
+                var elem = document.getElementById("myBar");
+                
+                var width = 0;
+                var time=0;
+                
+                    
+                    
+                    var interval=setInterval(()=>{
+                        
+                        if(time>=5 || flag==false)
+                        {
+                            
+                            flag=true;
+                            elem.style.width=width+"%";
+                            clearInterval(interval);
+                        }
+                        else{
+                            time++;
+                            width+=20;
+                            flag=true;
+                            elem.style.width=width+"%";
+                            console.log(width);
+                        }
+                    },1000);
+
+                    setTimeout(()=>{
+
+                        document.getElementById("myModal").style.display="none";
+                        document.getElementById("myModal").innerHTML="";
+                        width=0;
+                        time=0;
+                        elem.style.width=width+"%";
+
+                    },5000)
+
+                          
+            }
+            
+            function closeStatus()
+            {
+                
+                flag=false;
+                console.log("closed");
+            }
+           
+            
+            
+        </script>
+    </body>
+
+</html>

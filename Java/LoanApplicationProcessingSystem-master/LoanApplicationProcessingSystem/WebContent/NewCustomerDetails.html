@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Customer|Details</title>
+<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+<style>
+.navbar-default {
+	background: black;
+}
+/* .navbar-right
+    {
+        margin-right: 50px;
+    } */
+body {
+	background: url(./images/home.jpg) no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body class="bg">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand" href="#">Loan</a> -->
+
+				<ul class="nav navbar-nav">
+					<li><a href="./Homepage.html" style=""color:white">Home</a></li>
+					<li><a href="./view" style="color: white">View Schemes</a></li>
+					<li><a href="./AboutUs.html" style="color: white">AboutUs</a></li>
+					<li><a href="./Contact.html" style="color: white">Contact</a></li>
+					<li><form class="form-inline my-2 my-lg-0" method="get" action="./check">
+							<input class="form-control mr-sm-2" type="search"
+								placeholder="Phone Number" aria-label="Search" name="phn">
+							<button class="btn btn-outline-success my-2 my-sm-0"
+								type="submit">Check Status</button>
+						</form></li>
+				</ul>
+			</div>
+			
+    </nav>
+
+
+    <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <form action="./applyCont" method="get">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Applicant Name: </label> <input type="text"
+                                class="form-control" name="name" placeholder="Applicant Name">
+                        </div><br>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Date of Birth: </label> <input type="date"
+                                class="form-control" name="date" >
+                        </div><br>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Martial Status: </label> <select name="martial">
+                                    <option>---select---</option>
+                                    <option>yes</option>
+                                    <option>no</option>
+                                    </select></td>
+                
+                        </div><br>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Phone Number: </label> <input type="text"
+                                class="form-control" name="number" placeholder="phone number">
+                        </div><br>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Number of Dependents: </label> <input type="number"
+                                class="form-control" name="dependents" placeholder="minimum loan amount">
+                        </div><br>
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email Id: </label> <input type="email"
+                                class="form-control" name="email" placeholder="enter email Id">
+                        </div><br>
+                        
+                        
+                        <div class="form-group col-md-8">
+                    <button type="submit" class="btn btn-primary">Apply</button>
+            </div>
+        </div>
+        </form>
+    
+
+
+</body>
+</html>

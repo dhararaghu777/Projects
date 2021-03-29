@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Approved Loans</title>
+<link rel="stylesheet" href="./bootstrap-3.3.7-dist/css/bootstrap.css">
+<style>
+.navbar-default {
+	background: black;
+}
+/* .navbar-right
+    {
+        margin-right: 50px;
+    } */
+body {
+	background: url(./images/home.jpg) no-repeat;
+	background-size: cover;
+}
+</style>
+</head>
+<body class="bg">
+	<script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<!-- <a class="navbar-brand" href="#">Loan</a> -->
+
+				<ul class="nav navbar-nav">
+					
+					<li><a href="./view" style="color: white">View Schemes</a></li>
+					<li><a href="./AboutUs.html" style="color: white">AboutUs</a></li>
+					<li><a href="./Contact.html" style="color: white">Contact</a></li>
+					<li><form class="form-inline my-2 my-lg-0" method="get" action="./check">
+							<input class="form-control mr-sm-2" type="search"
+								placeholder="Phone Number" aria-label="Search" name="phn">
+							<button class="btn btn-outline-success my-2 my-sm-0"
+								type="submit">Check Status</button>
+						</form></li>
+				</ul>
+			</div>
+			<div class="navbar-header navbar-right">
+				<ul class="nav navbar-nav ">
+					<li><a href="./logoutcont" class="btn btn-danger "
+						role="button" style="color: white"> Logout</a></li>
+				</ul>
+			</div>
+    </nav>
+
+    <br>
+	<br>
+	<div class="jumbotron jumbotron-fluid">
+		<div class="container">
+			<form action="./approve" method="get">
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Customer Name: </label> <input type="text"
+							class="form-control" name="name" placeholder="Customer Name">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Amount Of Loan Approved: </label> <input type="text"
+							class="form-control" name="amnt" placeholder="Amount of Loan Approved">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Monthly Installment: </label> <input type="text"
+							class="form-control" name="instal" placeholder="Montly Installment">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Duration: </label> <input type="number"
+							class="form-control" name="duration" placeholder="duration in years">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Down Payment: </label> <input type="text"
+							class="form-control" name="payment" placeholder="down payment amout">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Rate of Interest: </label> <input type="text"
+							class="form-control" name="interest" placeholder="rate of interest">
+					</div><br>
+					<div class="form-group col-md-6">
+						<label for="inputEmail4">Total Amount Payable: </label> <input type="text"
+							class="form-control" name="total" placeholder="total payable amount">
+					</div><br>
+					
+					
+					<div class="form-group col-md-8">
+				<button type="submit" class="btn btn-primary">Approve Loan</button>
+		</div>
+	</div>
+	</form>
+
+    
+
+
+</body>
+</html>

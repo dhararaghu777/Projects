@@ -1,0 +1,32 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Mont', sans-serif;
+}
+body {
+    margin: 0px;
+}
+img {
+    max-width: 100%;
+}
+table {
+    width: 100%;
+}
+#personal-block .tablearea {
+    padding: 20px;
+}
+th, td {
+    padding: 6px;
+}
+th{
+    text-align: left;
+}
+.clr{
+    clear: both;
+}
+ul {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}

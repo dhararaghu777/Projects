@@ -1,0 +1,26 @@
+nav {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0px;
+}
+.logo-area {
+    float: left;
+    width: 100px;
+    height: 60px;
+}
+.logo-area img {
+    max-height: 100%;
+}
+header nav ul {
+    padding: 0px;
+    margin: 0px;
+    float: right;
+    list-style: none;
+}
+header nav ul li {
+    display: inline-block;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+    margin-top: 18px;
+}

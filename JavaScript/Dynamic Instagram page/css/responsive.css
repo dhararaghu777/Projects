@@ -1,0 +1,40 @@
+@media(max-width: 1310px){
+    .container {
+        width: 80%;
+    }
+}
+@media (max-width: 1160px){
+    .container {
+        width: 96%;
+    }
+}
+@media (max-width: 991px){
+    .col-3 {
+        width: 45%;
+    }
+    .profile-details {
+        width: 63%;
+    }
+}
+
+@media (max-width: 768px){
+    .col-3 {
+        width: 45%;
+    }
+    .profile-details {
+        width: 63%;
+    }
+    .profile-image {
+        display: block;
+        width: 160px;
+        margin: 0px auto;
+        float: none;
+    }
+    .profile-details {
+        width: 100%;
+        text-align: center;
+    }
+    .col{
+        width: 93%;
+    }
+}
